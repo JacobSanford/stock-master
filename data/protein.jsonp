@@ -1,0 +1,207 @@
+protein_types = [
+{
+    "id" : 'poultry',
+    "name":"Poultry",
+    "steps" : [
+                {
+                    'weight' : 10,
+                    'text' : 'Preheat oven to <i>425&#x2103;</i>.',
+                },
+                {
+                    'weight' : 15,
+                    'text' : 'Place bones (<b>{0}kg</b>) on a baking sheet and season with kosher salt.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Bones',
+                                        'value' : 0.001,
+                                        'number_decimal' : 2,
+                                        'immune_strength' : 1,
+                                        },
+                                    ],
+                },
+                {
+                    'weight' : 20,
+                    'text' : 'Roast bones in oven for <i>10 minutes</i> at <i>425&#x2103;</i>, and add roasted bones to a large stock pot.',
+                    'notes' : [
+                               'If bones are from raw chicken: bring them to a slow boil in a pan with water and skim protein from top. Then, remove from pot and place in oven - increase oven roasting time to <i>15 minutes</i>.',
+                               ]
+                },
+                {
+                    'weight' : 30,
+                    'text' : 'Add <b>{0}tsp</b> whole peppercorns to a small frying pan and heat on medium for <i>8 Minutes</i>. Crack peppercorns with bottom of pan on cutting board and add to pot.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Peppercorns',
+                                        'value' : 0.0015,
+                                        'number_decimal' : 0,
+                                        },
+                                    ],
+                },
+                {
+                    'weight' : 35,
+                    'text' : 'Finely mince <b>{0}g</b> onion, <b>{1}g</b> carrot, and <b>{2}g</b> celery and add to pot, along with <b>{3}</b> bay leaves and <b>{4}Tbsp</b> tomato paste. Season with kosher salt.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Onion',
+                                        'value' : 0.25,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Carrot',
+                                        'value' : 0.125,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Celery',
+                                        'value' : 0.125,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Bay Leaves',
+                                        'value' : 0.0015,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Tomato Paste',
+                                        'value' : 0.0015,
+                                        'number_decimal' : 0,
+                                        },
+                                    ],
+                },
+                {
+                    'weight' : 40,
+                    'text' : 'Add <b>{0}L</b> cold water to pot, and simmer on low heat for <i>4-6 hours</i>.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Water',
+                                        'value' : 0.0015,
+                                        'number_decimal' : 1,
+                                        'immune_strength' : 1,
+                                        },
+                                    ],
+                    'notes' : [
+                               'Boiling the stock instead of simmering will create cloudy stock.',
+                               'To process with pressure cooker, cook for <i>90 minutes</i> at <i>15psi</i>.',
+                               ]
+                },
+                {
+                    'weight' : 50,
+                    'text' : 'Allow mixture to cool slightly and strain into container with a colander.',
+                },
+                {
+                    'weight' : 55,
+                    'text' : 'After liquid cools further, remove fat from top of liquid with a turkey baster and discard fat layer.',
+                },
+                {
+                    'weight' : 60,
+                    'text' : 'Use stock or chill/freeze for storage immediately.',
+                },
+            ],
+},
+
+
+{
+    "id" : 'vegetable',
+    "name":"Vegetable",
+    "steps" : [
+                {
+                    'weight' : 10,
+                    'text' : 'Preheat oven to <i>425&#x2103;</i>.',
+                },
+                {
+                    'weight' : 15,
+                    'text' : 'Mince <b>{0}g</b> onion, <b>{1}g</b> leek, <b>{2}g</b> carrot, <b>{3}g</b> fennel, and <b>{3}g</b> mushroom. Season with kosher salt.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Onion',
+                                        'value' : 0.16666,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Leek',
+                                        'value' : 0.16666,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Carrot',
+                                        'value' : 0.16666,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Fennel',
+                                        'value' : 0.08333,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Mushroom',
+                                        'value' : 0.08333,
+                                        'number_decimal' : 0,
+                                        },
+                                    ],
+                },
+                {
+                    'weight' : 20,
+                    'text' : 'Spread ingredients on cookie sheet and roast in oven for <i>15 minutes</i> at <i>425&#x2103;</i>. Add ingredients to a large stock pot.',
+                },
+                {
+                    'weight' : 25,
+                    'text' : 'Add <b>{0}tsp</b> whole peppercorns to a small frying pan and heat on medium for <i>8 Minutes</i>.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Peppercorns',
+                                        'value' : 0.001,
+                                        'number_decimal' : 0,
+                                        },
+                                    ],
+                },
+                {
+                    'weight' : 25,
+                    'text' : 'Crack peppercorns with bottom of pan on cutting board and add to pot, along with <b>{0}</b> bay leaves and <b>{1}Tbsp</b> tomato paste.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Bay Leaves',
+                                        'value' : 0.001,
+                                        'number_decimal' : 0,
+                                        },
+                                        {
+                                        'info' : 'Tomato Paste',
+                                        'value' : 0.001,
+                                        'number_decimal' : 0,
+                                        },
+                                    ],
+                },
+                {
+                    'weight' : 30,
+                    'text' : 'Add <b>{0}L</b> water to pot, and simmer on low heat for <i>4-6 hours</i>.',
+                    'ingredients' : [
+                                        {
+                                        'info' : 'Water',
+                                        'value' : 0.001,
+                                        'number_decimal' : 1,
+                                        'immune_strength' : 1,
+                                        },
+                                    ],
+                    'notes' : [
+                               'To process with pressure cooker, cook for <i>90 minutes</i> at <i>15psi</i>.',
+                               ]
+                },
+                {
+                    'weight' : 35,
+                    'text' : 'Allow mixture to cool slightly and strain into container with a colander.',
+                },
+                {
+                    'weight' : 40,
+                    'text' : 'Use stock or chill/freeze for storage immediately.',
+                },
+            ],
+},
+
+
+{
+    "id" : 'brown',
+    "name":"Brown stock (Beef)",
+    "steps" : [
+    ],
+},
+
+];

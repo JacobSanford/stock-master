@@ -1,0 +1,5 @@
+stock_strengths = [
+    { label : 'Normal', modifier : 1.0 },
+    { label : 'Stronger', modifier : 1.2 },
+    { label : 'Weaker', modifier : 0.8 },
+];

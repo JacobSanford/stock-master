@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset=utf-8 />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="data/protein.jsonp"></script>
+        <script src="data/strength.jsonp"></script>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <title>Stock Master</title>
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h1>Stock Master</h1>
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <form id='stockAmountsCalculator'>
+                    <h2>Type of Stock</h2>
+                    <div data-role="fieldcontain">
+                        <label for="selStockType" class="select ui-select" id="lblStockType">Stock Type :</label>
+                        <div class="ui-select">
+                            <select id="selStockType">
+                            </select>
+                        </div>
+                    </div>
+
+                    <h2 id="lblTitleWeightOfBones">Weight of Bones</h2>
+                    <div data-role="fieldcontain">
+                        <label for="weightOfBones" class="ui-input-text" id="lblWeightOfBones">Weight of Bones (g) :</label>
+                        <input name="weightOfBones" type="text" id="txtWeightOfBones" value="1000" class="digits ui-input-text ui-body-c ui-corner-all ui-shadow-inset" min="100" max='10000'/>
+                    </div>
+
+                    <h2>Other Options</h2>
+                    <div data-role="fieldcontain">
+                        <label for="selStockStrength" class="select ui-select" id="lblStockStrength">Stock Strength :</label>
+                        <div class="ui-select">
+                            <select id="selStockStrength">
+                            </select>
+                        </div>
+                    </div>
+                </form>
+
+                <h2>Full Method</h2>
+                <div>
+                    <ol id="masterStepList">
+                    </ol>
+                </div>
+
+                <h2>Notes</h2>
+                <ol data-role="listview" id='masterNoteList'>
+                </ol>
+
+                <script>
+                jQuery(function($) {
+                    var selStockType = $("#selStockType");
+                    var txtWeightOfBones = $("#txtWeightOfBones");
+                    var selStockStrength = $("#selStockStrength");
+
+                    $([
+                        selStockType[0],
+                        txtWeightOfBones[0],
+                        selStockStrength[0]
+                    ]).bind("change paste", function(e) {
+                        var validate_object = $("#stockAmountsCalculator").validate();
+                        if ($("#stockAmountsCalculator").validate().invalid.weightOfBones == true) {
+                            // Pass
+                        } else {
+                        	setInputLabel();
+                            var protein_data = jQuery.parseJSON(JSON.stringify(protein_types));
+                            var selected_protein_object = getProteinObject(protein_data, $("#selStockType").val());
+                            var weight_bones = getAdjustedBonesWeight($("#txtWeightOfBones").val());
+                            buildStepList(selected_protein_object, weight_bones);
+                        }
+                    });
+                });
+
+                buildInitialPageElements();
+                </script>
+
+            </div><!-- /content -->
+        </div><!-- /page -->
+    </body>
+</html>
