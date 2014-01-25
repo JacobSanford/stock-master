@@ -197,11 +197,4 @@ protein_types = [
 },
 
 
-{
-    "id" : 'brown',
-    "name":"Brown stock (Beef)",
-    "steps" : [
-    ],
-},
-
 ];
