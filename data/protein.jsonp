@@ -23,7 +23,7 @@ protein_types = [
                     'weight' : 20,
                     'text' : 'Roast bones in oven for <i>10 minutes</i> at <i>425&#x2103;</i>, and add roasted bones to a large stock pot.',
                     'notes' : [
-                               'If bones are from raw chicken: bring them to a slow boil in a pan with water and skim protein from top. Then, remove from pot and place in oven - increase oven roasting time to <i>15 minutes</i>.',
+                               'If bones are from raw poultry: bring them to a slow boil in a pan with water and skim protein from top. Then, remove from pot and place in oven - increase oven roasting time to <i>15 minutes</i>.',
                                ]
                 },
                 {
